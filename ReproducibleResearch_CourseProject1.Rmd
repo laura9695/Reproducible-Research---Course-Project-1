@@ -49,6 +49,9 @@ ggplot(Total.steps, aes(steps)) +
   scale_x_continuous(breaks=seq(0,25000,2500)) + 
   scale_y_continuous(breaks=seq(0,18,2))
 
+dev.copy(png, file = "plot1.png")
+dev.off()
+
 ```
 
 ### Mean and median of the total number of steps taken per day
@@ -79,6 +82,9 @@ ggplot(Avg.steps, aes(interval, mean)) +
   xlab("Time") +
   ylab("Average number of steps") +
   theme(plot.title = element_text(face="bold", size=12))
+
+dev.copy(png, file = "plot2.png")
+dev.off()
 
 ```
 
@@ -135,6 +141,9 @@ ggplot(Total.steps.new, aes(steps)) +
   scale_x_continuous(breaks=seq(0,25000,2500)) + 
   scale_y_continuous(breaks=seq(0,28,2))
 
+dev.copy(png, file = "plot3.png")
+dev.off()
+
 ```
 
 ### Calculate and report the mean and median total number of steps taken per day
@@ -177,5 +186,8 @@ ggplot(Avg.steps.new, aes(interval, mean)) +
   ylab("Steps") +
   theme(plot.title = element_text(face="bold", size=12)) +
   facet_grid(day.type ~ .)
+
+dev.copy(png, file = "plot4.png")
+dev.off()
 
 ```
